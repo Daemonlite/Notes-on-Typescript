@@ -14,23 +14,28 @@ function calculateTax(income, taxYear) {
     return income * 1.3;
 }
 calculateTax(20000);
-let employees = { id: 1,
+let employees = {
+    id: 1,
     name: "eugy",
     retire: (date) => {
         console.log(date);
-    }
+    },
 };
 let employee = {
     id: 1,
     name: "eugy",
     retire: (date) => {
         console.log(date);
-    }
+    },
 };
 function kgToLbs(weight) {
-    if (typeof weight === 'number')
+    if (typeof weight === "number")
         return weight * 2.2;
     else
         return parseInt(weight) * 2.2;
 }
+let textBox = {
+    drag: () => { },
+    resize: () => { }
+};
 //# sourceMappingURL=main.js.map

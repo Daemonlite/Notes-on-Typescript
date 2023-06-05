@@ -44,39 +44,55 @@ calculateTax(20_000);
 let employees: {
   readonly id: number;
   name: string;
-  retire: (date:Date) => void
-} = { id: 1,
-     name: "eugy",
-     retire:(date:Date)=> {
-        console.log(date)
-     }
-    };
+  retire: (date: Date) => void;
+} = {
+  id: 1,
+  name: "eugy",
+  retire: (date: Date) => {
+    console.log(date);
+  },
+};
+
 
 //Aliases (type)
 // Aliases allows types to be easily shared between different variables/objects.
 
 type Employee = {
-    readonly id: number;
-    name: string;
-    retire: (date:Date) => void
-}
+  readonly id: number;
+  name: string;
+  retire: (date: Date) => void;
+};
 
 let employee: Employee = {
-       id: 1,
-       name: "eugy",
-       retire:(date:Date)=> {
-          console.log(date)
-       }
-      };
-
+  id: 1,
+  name: "eugy",
+  retire: (date: Date) => {
+    console.log(date);
+  },
+};
 
 //union Types
 //these are used to give a parameter more than a type
-function kgToLbs(weight:string | number):number{
-//narrowing
-if(typeof weight === 'number')
-  return weight * 2.2
+function kgToLbs(weight: string | number): number {
+  //narrowing
+  if (typeof weight === "number") return weight * 2.2;
+  else return parseInt(weight) * 2.2;
+}
 
-else 
-   return parseInt(weight) * 2.2
+//intersection Types
+//An intersection type combines multiple types into one. 
+//This allows you to add together existing types to get a single type that has all the features you need.
+type Draggable = {
+    drag: () => void
+}
+
+type Resizable = {
+    resize: () => void
+}
+
+type UiWidget = Draggable & Resizable;
+
+let textBox : UiWidget = {
+  drag: () => {},
+  resize: () => {}
 }

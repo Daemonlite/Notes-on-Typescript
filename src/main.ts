@@ -96,3 +96,24 @@ let textBox : UiWidget = {
   drag: () => {},
   resize: () => {}
 }
+
+//literal Types (exact or specific)
+//literal types can be both strings or numbers
+type Quantity = 100 | 50
+type Metric = 'cm' | 'inch'
+let quantity: Quantity = 100
+
+//Nullable Types
+// gives you the ability to pass in null and undefined as parameters
+function greet(name:string | null | undefined) {
+    if (name)
+      console.log(name);
+    else
+      console.log('hola');
+      
+}
+
+greet(null)
+
+
+

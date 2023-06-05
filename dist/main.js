@@ -38,4 +38,12 @@ let textBox = {
     drag: () => { },
     resize: () => { }
 };
+let quantity = 100;
+function greet(name) {
+    if (name)
+        console.log(name);
+    else
+        console.log('hola');
+}
+greet(null);
 //# sourceMappingURL=main.js.map

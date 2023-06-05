@@ -40,16 +40,30 @@ calculateTax(20_000);
 
 //Objects
 // use the readonly keyword to make a value readonly and not editable
-let employee: {
-  readonly id: number;
-  name: string;
-  retire: (date:Date) => void
-} = { id: 1,
-     name: "eugy",
-     retire:(date:Date)=> {
-        console.log(date)
-     }
-    };
+// let employees: {
+//   readonly id: number;
+//   name: string;
+//   retire: (date:Date) => void
+// } = { id: 1,
+//      name: "eugy",
+//      retire:(date:Date)=> {
+//         console.log(date)
+//      }
+//     };
 
 //Aliases
+// Aliases allows types to be easily shared between different variables/objects.
 
+type Employee = {
+    readonly id: number;
+    name: string;
+    retire: (date:Date) => void
+}
+
+let employee: Employee = {
+       id: 1,
+       name: "eugy",
+       retire:(date:Date)=> {
+          console.log(date)
+       }
+      };

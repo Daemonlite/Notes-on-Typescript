@@ -14,6 +14,12 @@ function calculateTax(income, taxYear) {
     return income * 1.3;
 }
 calculateTax(20000);
+let employees = { id: 1,
+    name: "eugy",
+    retire: (date) => {
+        console.log(date);
+    }
+};
 let employee = {
     id: 1,
     name: "eugy",

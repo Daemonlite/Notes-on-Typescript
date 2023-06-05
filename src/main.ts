@@ -115,5 +115,24 @@ function greet(name:string | null | undefined) {
 
 greet(null)
 
+//Optional Chaining
+type Customer  = {
+    birthday? : Date
+}
 
+function getCustomer(id:number):Customer | null | undefined {
+        return id===0 ? null : { birthday : new Date()}
+}
 
+let customer = getCustomer(1)
+// if (customer !==null && customer !==undefined)
+// optional property access operator (?)
+
+    console.log(customer?.birthday?.getFullYear());
+
+//optional element access operator
+// customer?.[0]
+
+// optional call operator
+let log:any = null;
+log?.('a')

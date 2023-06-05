@@ -1,4 +1,5 @@
 "use strict";
+var _a;
 let numbers = [];
 let ages = [10, 23, 54, 5];
 let user = ["eugy", 12];
@@ -46,4 +47,11 @@ function greet(name) {
         console.log('hola');
 }
 greet(null);
+function getCustomer(id) {
+    return id === 0 ? null : { birthday: new Date() };
+}
+let customer = getCustomer(1);
+console.log((_a = customer === null || customer === void 0 ? void 0 : customer.birthday) === null || _a === void 0 ? void 0 : _a.getFullYear());
+let log = null;
+log === null || log === void 0 ? void 0 : log('a');
 //# sourceMappingURL=main.js.map

@@ -27,4 +27,10 @@ let employee = {
         console.log(date);
     }
 };
+function kgToLbs(weight) {
+    if (typeof weight === 'number')
+        return weight * 2.2;
+    else
+        return parseInt(weight) * 2.2;
+}
 //# sourceMappingURL=main.js.map

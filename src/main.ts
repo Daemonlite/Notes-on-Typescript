@@ -68,3 +68,15 @@ let employee: Employee = {
           console.log(date)
        }
       };
+
+
+//union Types
+//these are used to give a parameter more than a type
+function kgToLbs(weight:string | number):number{
+//narrowing
+if(typeof weight === 'number')
+  return weight * 2.2
+
+else 
+   return parseInt(weight) * 2.2
+}
